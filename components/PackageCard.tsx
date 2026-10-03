@@ -6,6 +6,7 @@ import { useGSAP } from "@gsap/react";
 import { PackageItem, CONTACT } from "@/content/site";
 import { packageEnquiryUrl } from "@/lib/whatsapp";
 import Gallery from "./Gallery";
+import InstagramGallery from "./InstagramGallery";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(useGSAP);
@@ -118,7 +119,11 @@ export default function PackageCard({ pkg, defaultOpen = false }: PackageCardPro
             ))}
           </ul>
 
-          {pkg.images && pkg.images.length > 0 && <Gallery images={pkg.images} />}
+          {pkg.instagramPosts && pkg.instagramPosts.length > 0 ? (
+            <InstagramGallery posts={pkg.instagramPosts} />
+          ) : pkg.images && pkg.images.length > 0 ? (
+            <Gallery images={pkg.images} />
+          ) : null}
 
           <a
             href={CONTACT.instagram}

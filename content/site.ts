@@ -8,6 +8,11 @@ export const CONTACT = {
   phoneDisplay: "9351975852",
 } as const;
 
+export type InstagramPostItem = {
+  url: string;
+  title?: string;
+};
+
 export type PackageItem = {
   id: "essential" | "elegant" | "elite" | "luxury" | "signature";
   name: string;
@@ -19,7 +24,8 @@ export type PackageItem = {
   bestFor: string;
   badges: string[];
   features: string[];
-  images: { src: string; alt: string }[];
+  images?: { src: string; alt: string }[];
+  instagramPosts?: InstagramPostItem[];
 };
 
 export const HERO = {
@@ -85,6 +91,14 @@ export const PACKAGES: PackageItem[] = [
       { src: "/images/signature-2.jpeg", alt: "Essential Collection setup" },
       { src: "/images/elite-2.jpeg", alt: "Essential Collection setup" },
     ],
+    instagramPosts: [
+      { url: "https://www.instagram.com/p/DQ7JIkGk4r8/", title: "Essential Setup 1" },
+      { url: "https://www.instagram.com/reel/DQrrIa_k9MV/", title: "Essential Setup 2" },
+      { url: "https://www.instagram.com/reel/DblUBh3AsAf/", title: "Essential Setup 3" },
+      { url: "https://www.instagram.com/reel/DSVMQDOE8Lk/", title: "Essential Setup 4" },
+      { url: "https://www.instagram.com/reel/DJoriKfz0A1/", title: "Essential Setup 5" },
+      { url: "https://www.instagram.com/reel/DWoprB8k_XQ/", title: "Essential Setup 6" },
+    ],
   },
   {
     id: "elegant",
@@ -118,6 +132,12 @@ export const PACKAGES: PackageItem[] = [
       { src: "/images/elite-3.jpeg", alt: "Elegant Collection setup" },
       { src: "/images/signature-4.jpeg", alt: "Elegant Collection setup" },
       { src: "/images/elite-4.jpeg", alt: "Elegant Collection setup" },
+    ],
+    instagramPosts: [
+      { url: "https://www.instagram.com/p/DXeshhIkgy5/", title: "Elegant Setup 1" },
+      { url: "https://www.instagram.com/p/DZUlhsKkqix/", title: "Elegant Setup 2" },
+      { url: "https://www.instagram.com/reel/DWwO7F3THzs/", title: "Elegant Setup 3" },
+      { url: "https://www.instagram.com/reel/DZc28qnA77q/", title: "Elegant Setup 4" },
     ],
   },
   {
@@ -159,6 +179,16 @@ export const PACKAGES: PackageItem[] = [
       { src: "/images/elite-6.jpeg", alt: "Elite Collection setup" },
       { src: "/images/elite-7.jpeg", alt: "Elite Collection setup" },
     ],
+    instagramPosts: [
+      { url: "https://www.instagram.com/reel/DYZ5nrxSzzm/", title: "Elite Setup 1" },
+      { url: "https://www.instagram.com/p/DYOsArWksiP/", title: "Elite Setup 2" },
+      { url: "https://www.instagram.com/reel/DUCfAwdEiie/", title: "Elite Setup 3" },
+      { url: "https://www.instagram.com/reel/DW-643gypNr/", title: "Elite Setup 4" },
+      { url: "https://www.instagram.com/reel/DX4EmpzytlL/", title: "Elite Setup 5" },
+      { url: "https://www.instagram.com/reel/DYSLTjVSe9L/", title: "Elite Setup 6" },
+      { url: "https://www.instagram.com/reel/DZ5NVBdgdr8/", title: "Elite Setup 7" },
+      { url: "https://www.instagram.com/reel/DW36M-ZynyL/", title: "Elite Setup 8" },
+    ],
   },
   {
     id: "luxury",
@@ -199,6 +229,12 @@ export const PACKAGES: PackageItem[] = [
       { src: "/images/elite-5.jpeg", alt: "Luxury Collection setup" },
       { src: "/images/elite-6.jpeg", alt: "Luxury Collection setup" },
       { src: "/images/elite-7.jpeg", alt: "Luxury Collection setup" },
+    ],
+    instagramPosts: [
+      { url: "https://www.instagram.com/p/DLuljJASfBy/", title: "Luxury Setup 1" },
+      { url: "https://www.instagram.com/reel/DVQ79Sgkn8o/", title: "Luxury Setup 2" },
+      { url: "https://www.instagram.com/reel/DHlVDKwSnNg/", title: "Luxury Setup 3" },
+      { url: "https://www.instagram.com/reel/DM5AAMwyHOt/", title: "Luxury Setup 4" },
     ],
   },
   {
@@ -243,6 +279,14 @@ export const PACKAGES: PackageItem[] = [
       { src: "/images/signature-7.jpeg", alt: "Signature Collection setup" },
       { src: "/images/signature-8.jpeg", alt: "Signature Collection setup" },
       { src: "/images/signature-9.jpeg", alt: "Signature Collection setup" },
+    ],
+    instagramPosts: [
+      { url: "https://www.instagram.com/p/DX6raiNkgX1/", title: "Signature Setup 1" },
+      { url: "https://www.instagram.com/p/DX3HrIfkn_r/", title: "Signature Setup 2" },
+      { url: "https://www.instagram.com/p/Dcq1WhvEnxe/", title: "Signature Setup 3" },
+      { url: "https://www.instagram.com/reel/DXuDRlDk7oU/", title: "Signature Setup 4" },
+      { url: "https://www.instagram.com/reel/DcYzX3pg6QH/", title: "Signature Setup 5" },
+      { url: "https://www.instagram.com/reel/DXzB74NyCW3/", title: "Signature Setup 6" },
     ],
   },
 ];
