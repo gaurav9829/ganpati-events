@@ -1,0 +1,19 @@
+/* humans.txt */
+
+Team:
+  Ganpati Events — decoration, photography and sound for birthdays in Jodhpur.
+
+Site:
+  Framework: Next.js (App Router), TypeScript, Tailwind CSS
+  Design tokens: CSS variables in app/globals.css
+
+Location:
+  Magra Punjla, Jodhpur, Rajasthan, India
+
+Contact:
+  WhatsApp / Phone: +91 93519 75852
+  Instagram: https://www.instagram.com/expert_birthday_setup/
+
+Standards:
+  Structured data: schema.org (LocalBusiness, FAQPage, HowTo, Service)
+  All conversions via WhatsApp / tel links

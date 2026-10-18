@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "node scripts/test-whatsapp.js"
+    "test": "node scripts/test-whatsapp.js",
+    "seo:images": "powershell -ExecutionPolicy Bypass -File scripts/generate-branded-images.ps1"
   },
   "dependencies": {
     "@gsap/react": "^2.1.1",
