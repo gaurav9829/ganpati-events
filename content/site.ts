@@ -75,7 +75,7 @@ export const PACKAGES: PackageItem[] = [
       "1 Welcome Board",
       "Baby Trolley – Optional",
       "6 Theme Cutout Balloon Stands",
-      "8 Balloon Drop Entry OR 8 Cold-Fire Entry — Choose 1",
+      "6 Balloon Drop Entry OR 8 Cold-Fire Entry — Choose 1",
       "Birthday Light",
       "All-over Extra Decoration",
       "Normal Flower Decor",
