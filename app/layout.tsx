@@ -1,5 +1,4 @@
 import type { Metadata, Viewport } from "next";
-import Script from "next/script";
 import JsonLd from "@/components/seo/JsonLd";
 import { fullSeoGraph } from "@/lib/schema";
 import { SITE } from "@/lib/seo";
@@ -92,7 +91,6 @@ export default function RootLayout({
       <body className="min-h-screen bg-bg text-text antialiased font-sans">
         {children}
         <JsonLd data={fullSeoGraph()} />
-        <Script src="https://www.instagram.com/embed.js" strategy="lazyOnload" />
       </body>
     </html>
   );

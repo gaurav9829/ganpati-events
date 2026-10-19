@@ -36,12 +36,13 @@ export default function Hero() {
       {/* ── VIDEO BACKGROUND ── */}
       <video
         src="/videos/celebration_video.mp4"
+        poster="/images/hero.jpeg"
         className="absolute inset-0 w-full h-full object-cover object-center"
         autoPlay
         loop
         muted
         playsInline
-        preload="auto"
+        preload="metadata"
         aria-hidden="true"
       />
 

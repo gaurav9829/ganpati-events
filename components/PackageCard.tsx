@@ -19,6 +19,9 @@ interface PackageCardProps {
 
 export default function PackageCard({ pkg, defaultOpen = false }: PackageCardProps) {
   const [isOpen, setIsOpen] = useState(defaultOpen);
+  // Heavy body content (photo galleries & Instagram embeds) is only rendered
+  // after the card has been opened once — keeps initial page load light.
+  const [hasOpened, setHasOpened] = useState(defaultOpen);
   const contentRef = useRef<HTMLDivElement>(null);
   const cardRef = useRef<HTMLDivElement>(null);
 
@@ -46,7 +49,9 @@ export default function PackageCard({ pkg, defaultOpen = false }: PackageCardPro
   );
 
   const toggleOpen = () => {
-    setIsOpen((prev) => !prev);
+    const next = !isOpen;
+    if (next) setHasOpened(true);
+    setIsOpen(next);
   };
 
   const whatsappUrl = packageEnquiryUrl(pkg.shortName, pkg.priceWhatsApp);
@@ -119,11 +124,12 @@ export default function PackageCard({ pkg, defaultOpen = false }: PackageCardPro
             ))}
           </ul>
 
-          {pkg.instagramPosts && pkg.instagramPosts.length > 0 ? (
-            <InstagramGallery posts={pkg.instagramPosts} />
-          ) : pkg.images && pkg.images.length > 0 ? (
-            <Gallery images={pkg.images} />
-          ) : null}
+          {hasOpened &&
+            (pkg.instagramPosts && pkg.instagramPosts.length > 0 ? (
+              <InstagramGallery posts={pkg.instagramPosts} expanded={isOpen} />
+            ) : pkg.images && pkg.images.length > 0 ? (
+              <Gallery images={pkg.images} />
+            ) : null)}
 
           <a
             href={CONTACT.instagram}
